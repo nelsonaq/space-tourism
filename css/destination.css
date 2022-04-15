@@ -9,13 +9,13 @@ a {
   color: #ffffff;
   text-decoration: none;
   font-family: "Barlow Condensed", sans-serif;
-  letter-spacing: 2.7px;
+  letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
 }
 
 .main-container {
-  background-image: url(/assets/home/background-home-mobile.jpg);
+  background-image: url(/assets/destination/background-destination-mobile.jpg);
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -49,10 +49,6 @@ a {
   height: 1.3125rem;
 }
 
-.nav-container {
-  display: none;
-}
-
 .hide-overlay {
   transform: translateX(15.875rem);
 }
@@ -67,6 +63,10 @@ a {
   width: 15.875rem;
   height: 100vh;
   transition: all 0.5s cubic-bezier(0.75, 0.18, 0.27, 0.82);
+}
+
+.links-container {
+  display: none;
 }
 
 .overlay img {
@@ -88,71 +88,118 @@ a {
   padding: 1rem 0;
 }
 
-.overlay-links span {
+.overlay-links b {
   padding-right: 0.25rem;
-  font-weight: 700;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.container span {
+  color: #ffffff;
+  opacity: 0.25;
+  padding-right: 1.125rem;
+  font-weight: 400;
+}
+
+.container h4 {
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.container h1 {
+  color: #ffffff;
+  font-family: "Bellefair", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding-top: 1.25rem;
+}
+
+.container p {
   color: #d0d6f9;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1.5rem;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20.4375rem;
-  height: 17.25rem;
-}
-
-.introduction h4 {
-  letter-spacing: 3px;
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 300;
-}
-
-.introduction h1 {
-  color: #ffffff;
-  line-height: 6.25rem;
-  font-size: 5rem;
-  font-family: "Bellefair", serif;
-  font-weight: 400;
-}
-
-.introduction p {
+  width: 20rem;
+  line-height: 1.5625rem;
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
-  line-height: 1.5625rem;
+  font-weight: 300;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.container p::after {
+  position: absolute;
+  content: "";
+  background: #383b4b;
+  bottom: 0;
+  left: 0;
+  width: 20.4375rem;
+  height: 1px;
+}
+
+.container h5 {
+  color: #d0d6f9;
+  letter-spacing: 2.3625px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding-bottom: 0.75rem;
+}
+
+.distance {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.distance h2 {
+  color: #ffffff;
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.75rem;
   font-weight: 300;
 }
 
-.circle {
-  margin-top: 5.0625rem;
-  background-color: #ffffff;
-  width: 9.375rem;
-  height: 9.375rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.travel {
+  padding-top: 2rem;
+  text-align: center;
 }
 
-.circle span {
-  font-family: "Bellefair", serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 1.25px;
-  color: #0b0d17;
+.travel h2 {
+  color: #ffffff;
+  font-family: "Bellefair", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.planet-img {
+  height: 10.625rem;
+  width: 10.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.625rem;
+}
+
+.planet-names {
+  display: flex;
+  justify-content: space-between;
+  width: 14.84375rem;
+  height: 1.75rem;
+}
+
+.planet-names li {
+  color: #ffffff;
+  letter-spacing: 2.3625px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border-bottom: 3px solid #ffffff;
 }
 
 @media (min-width: 47.9375rem) {
   .main-container {
-    background: url(/assets/home/background-home-tablet.jpg);
+    background: url(/assets/destination/background-destination-tablet.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -161,7 +208,7 @@ a {
     display: none;
   }
 
-  .nav-container {
+  .links-container {
     height: 6rem;
     min-width: 28.125rem;
     background: rgba(255, 255, 255, 0.04);
@@ -180,7 +227,7 @@ a {
     font-size: 0.875rem;
   }
 
-  .links span {
+  .links b {
     visibility: hidden;
   }
 
@@ -208,45 +255,11 @@ a {
     transform: scaleX(1);
     transform-origin: left;
   }
-
-  .container {
-    padding-top: 6.625rem;
-    padding-bottom: 5.625rem;
-  }
-
-  .introduction {
-    width: 28.125rem;
-    height: 23.875rem;
-  }
-
-  .introduction h1 {
-    font-size: 9.375rem;
-  }
-
-  .introduction p {
-    line-height: 1.75rem;
-    letter-spacing: 1px;
-  }
-
-  .circle {
-    margin-top: 9.75rem;
-    width: 15.125rem;
-    height: 15.125rem;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .circle span {
-    font-size: 2rem;
-  }
-
-  .circle:hover {
-    box-shadow: 0rem 0rem 0rem 4rem rgb(255, 255, 255, 0.1);
-  }
 }
 
 @media (min-width: 89.9375rem) {
   .main-container {
-    background: url(/assets/home/background-home-desktop.jpg);
+    background: url(/assets/destination/background-destination-desktop.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -257,11 +270,11 @@ a {
     position: relative;
   }
 
-  .nav-container {
+  .links-container {
     padding: 0 2rem;
   }
 
-  .nav-container:after {
+  .links-container:after {
     position: absolute;
     content: "";
     top: 3rem;
@@ -272,7 +285,7 @@ a {
     opacity: 0.25;
   }
 
-  .nav-container {
+  .links-container {
     width: 51.875rem;
   }
   .links {
@@ -284,27 +297,8 @@ a {
     font-size: 1rem;
   }
 
-  .links span {
+  .links b {
     visibility: visible;
     padding-right: 0.5rem;
-  }
-
-  .container {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .introduction h4 {
-    font-size: 1.75rem;
-  }
-
-  .introduction p {
-    font-size: 1.125rem;
-    line-height: 2rem;
-  }
-
-  .circle {
-    width: 17.125rem;
-    height: 17.125rem;
   }
 }
