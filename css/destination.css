@@ -171,36 +171,24 @@ a {
   height: 1px;
 }
 
-.container h5 {
+.planet-details {
+  text-align: center;
+}
+
+.planet-details h5 {
   color: #d0d6f9;
   letter-spacing: 2.3625px;
   font-size: 0.875rem;
   font-weight: 300;
-  padding-bottom: 0.75rem;
-}
-
-.distance {
   padding-top: 2rem;
-  text-align: center;
 }
 
-.distance h2 {
+.planet-details h2 {
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
   font-size: 1.75rem;
   font-weight: 300;
-}
-
-.travel {
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.travel h2 {
-  color: #ffffff;
-  font-family: "Bellefair", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 300;
+  padding-top: 0.75rem;
 }
 
 @media (min-width: 47.9375rem) {
