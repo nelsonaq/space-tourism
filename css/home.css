@@ -157,6 +157,13 @@ a {
     background-position: center;
   }
 
+  .logo {
+    width: 3rem;
+    height: 3rem;
+    margin: 1.5rem 2.5rem;
+    transition: transform 0.6s ease-in-out;
+  }
+
   .hamburger {
     display: none;
   }

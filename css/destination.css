@@ -173,6 +173,10 @@ a {
 
 .planet-details {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .planet-details h5 {
@@ -196,6 +200,13 @@ a {
     background: url(/assets/destination/background-destination-tablet.jpg);
     background-size: cover;
     background-position: center;
+  }
+
+  .logo {
+    width: 3rem;
+    height: 3rem;
+    margin: 1.5rem 2.5rem;
+    transition: transform 0.6s ease-in-out;
   }
 
   .hamburger {
@@ -248,6 +259,53 @@ a {
   .links li:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+  }
+
+  .container {
+    padding-top: 2.5rem;
+  }
+
+  .container h4 {
+    align-self: flex-start;
+    font-size: 1.25rem;
+    padding-left: 2.375rem;
+  }
+
+  .container img {
+    margin-top: 3.75rem;
+    margin-bottom: 3.25rem;
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+
+  .planet-names {
+    height: 2.125rem;
+    width: 17.875rem;
+  }
+
+  .planet-names li {
+    font-size: 1rem;
+  }
+
+  .planet-info h1 {
+    font-size: 5rem;
+    padding-top: 2rem;
+  }
+
+  .planet-info p {
+    width: 35.75rem;
+    height: 8.25rem;
+    font-size: 1rem;
+  }
+
+  .planet-info p::after {
+    width: 35.75rem;
+  }
+
+  .planet-details {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 35.75rem;
   }
 }
 
