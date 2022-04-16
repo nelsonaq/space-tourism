@@ -136,15 +136,26 @@ a {
 }
 
 .planet-names li {
+  cursor: pointer;
   color: #ffffff;
   letter-spacing: 2.3625px;
   font-size: 0.875rem;
   font-weight: 300;
+  border-bottom: 3px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.planet-names li:hover {
   border-bottom: 3px solid #ffffff;
+}
+
+.active-planet {
+  border-bottom-color: #ffffff !important;
 }
 
 .planet-info h1 {
   color: #ffffff;
+  text-transform: uppercase;
   font-family: "Bellefair", sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
@@ -190,6 +201,7 @@ a {
 }
 
 .planet-details h2 {
+  text-transform: uppercase;
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
   font-size: 1.75rem;
@@ -235,12 +247,11 @@ a {
   }
 
   .links b {
-    visibility: hidden;
+    display: none;
   }
 
   .links li {
     padding: 2.4375rem 0;
-    border-bottom: 0.1875rem solid transparent;
     transition: all 0.4s ease-in-out;
     position: relative;
   }
@@ -354,7 +365,7 @@ a {
   }
 
   .links b {
-    visibility: visible;
+    display: inline-block;
     padding-right: 0.5rem;
   }
 
