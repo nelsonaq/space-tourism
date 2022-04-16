@@ -99,18 +99,20 @@ a {
   font-family: "Barlow Condensed", sans-serif;
 }
 
-.container span {
+.intro {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.intro span {
   color: #ffffff;
   opacity: 0.25;
   padding-right: 1.125rem;
   font-weight: 400;
-}
-
-.container h4 {
-  color: #ffffff;
-  letter-spacing: 3px;
-  font-weight: 300;
-  font-size: 1rem;
 }
 
 .planet-info {
@@ -261,14 +263,12 @@ a {
     transform-origin: left;
   }
 
-  .container {
-    padding-top: 2.5rem;
-  }
-
-  .container h4 {
+  .intro {
+    text-align: start;
     align-self: flex-start;
     font-size: 1.25rem;
     padding-left: 2.375rem;
+    padding-top: 2.5rem;
   }
 
   .container img {
@@ -316,6 +316,10 @@ a {
     background-position: center;
   }
 
+  .logo {
+    margin-left: 1.375rem;
+  }
+
   .nav-bar {
     padding-top: 2.5rem;
     padding-left: 2rem;
@@ -352,5 +356,58 @@ a {
   .links b {
     visibility: visible;
     padding-right: 0.5rem;
+  }
+
+  .intro {
+    font-size: 1.75rem;
+    padding-left: 10.375rem;
+  }
+
+  .container {
+    height: 33.875rem;
+    padding: 0 10.25rem 0 14.375rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container img {
+    align-self: flex-end;
+    width: 27.75rem;
+    height: 27.75rem;
+    margin: 0;
+  }
+
+  .planet-info {
+    align-items: flex-start;
+    width: 27.75rem;
+  }
+
+  .planet-info h1 {
+    font-size: 6.25rem;
+    padding-top: 2.25rem;
+    padding-bottom: 0.875rem;
+  }
+
+  .planet-info p {
+    text-align: start;
+    line-height: 2rem;
+    width: inherit;
+    height: fit-content;
+    font-size: 1.125rem;
+    padding-bottom: 3.375rem;
+  }
+
+  .planet-info p::after {
+    width: 27.75rem;
+  }
+
+  .planet-details {
+    text-align: start;
+    justify-content: space-between;
+    width: 21.25rem;
+  }
+
+  .planet-details h5 {
+    padding-top: 1.75rem;
   }
 }
