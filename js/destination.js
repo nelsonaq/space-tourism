@@ -35,16 +35,15 @@ const getJSON = async function () {
   }
 };
 
-// planetNames.forEach((planetEl, planetNum) => {
-//   planetEl.addEventListener("click", function () {
-//     getJSON().then((data) => updateUI(data, planetNum));
-//   });
-// });
-
 planetNames.addEventListener("click", function (e) {
+  e.preventDefault();
   const selected = e.target.closest("li");
   if (!selected) return;
   const selectedId = selected.dataset.id;
+  planetImg.classList.remove("planet-img-animation");
+  void planetImg.offsetWidth;
+  planetImg.classList.add("planet-img-animation");
+
   planetNames
     .querySelectorAll("li")
     .forEach((planet) => planet.classList.remove("active-planet"));
