@@ -21,19 +21,6 @@ a {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  position: relative;
-  z-index: -1;
-}
-
-.main-container::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .nav-bar {
@@ -130,15 +117,16 @@ a {
 }
 
 .crew-img-container {
-  width: 20.5rem;
-  height: 14rem;
   display: flex;
+  justify-content: center;
   position: relative;
+  width: 20.5rem;
 }
 
 .crew-img {
-  object-fit: contain;
-  transform: translateX(-4.5rem);
+  width: 11rem;
+  height: 13.875rem;
+  padding-left: 1.125rem;
 }
 
 .crew-img-container::after {
@@ -158,7 +146,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .dots {
@@ -180,8 +168,14 @@ a {
   opacity: 1;
 }
 
-.crew-info-container h4 {
+.crew-info {
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crew-info h4 {
   padding-bottom: 0.5rem;
   color: #ffffff;
   opacity: 0.5;
@@ -189,7 +183,7 @@ a {
   font-weight: 300;
 }
 
-.crew-info-container h3 {
+.crew-info h3 {
   padding-bottom: 1rem;
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
@@ -197,7 +191,7 @@ a {
   font-weight: 300;
 }
 
-.crew-info-container p {
+.crew-info p {
   color: #d0d6f9;
   line-height: 1.5625rem;
   text-align: center;
@@ -208,7 +202,7 @@ a {
 
 @media (min-width: 47.9375rem) {
   .main-container {
-    background: url(/assets/destination/background-destination-tablet.jpg);
+    background: url(/assets/crew/background-crew-tablet.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -281,6 +275,50 @@ a {
     font-size: 1.25rem;
     padding-left: 2.375rem;
     padding-top: 2.5rem;
+  }
+
+  .container {
+    padding-top: 3.75rem;
+    flex-direction: column-reverse;
+  }
+
+  .crew-img-container {
+    position: absolute;
+    bottom: -2.5rem;
+  }
+
+  .crew-img {
+    width: 28.5rem;
+    height: 35.75rem;
+    padding-left: 2.5rem;
+  }
+
+  .crew-img-container::after {
+    display: none;
+  }
+
+  .crew-info-container {
+    margin-top: 0;
+    width: 28.625rem;
+    height: 14.5rem;
+    flex-direction: column-reverse;
+  }
+
+  .crew-info {
+    padding-top: 0;
+  }
+
+  .crew-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .crew-info h3 {
+    font-size: 2.5rem;
+  }
+
+  .crew-info p {
+    line-height: 1.75rem;
+    font-size: 1rem;
   }
 }
 
