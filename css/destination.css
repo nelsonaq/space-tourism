@@ -152,7 +152,7 @@ a {
 
 .planet-names li {
   cursor: pointer;
-  color: #ffffff;
+  color: #d0d6f9;
   letter-spacing: 2.3625px;
   font-size: 0.875rem;
   font-weight: 300;
@@ -164,7 +164,8 @@ a {
   border-bottom: 3px solid #ffffff;
 }
 
-.active-planet {
+.selected-planet {
+  color: #ffffff !important;
   border-bottom-color: #ffffff !important;
 }
 
