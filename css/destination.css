@@ -130,18 +130,16 @@ a {
 }
 
 .planet-img-animation {
-  animation: planet-animation 1s cubic-bezier(0.09, 0.02, 0.02, 0.97);
+  animation: planet-animation 0.8s cubic-bezier(0.03, 0.38, 0.64, 0.96);
 }
 
 @keyframes planet-animation {
   0% {
-    transform: translateX(-40rem) rotate(180deg);
-  }
-  60% {
-    transform: translateX(0.5rem) rotate(3deg);
+    transform: translateY(10rem) scale(0.4);
+    opacity: 0.1;
   }
   100% {
-    transform: translateX(0rem) rotate(0deg);
+    transform: translateY(0rem);
   }
 }
 
