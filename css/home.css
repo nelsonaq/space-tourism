@@ -198,6 +198,10 @@ a {
     position: relative;
   }
 
+  .links li:nth-child(1)::after {
+    transform: scaleX(1);
+  }
+
   .links li:after {
     position: absolute;
     content: "";
