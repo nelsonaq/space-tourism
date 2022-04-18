@@ -115,25 +115,25 @@ a {
   font-weight: 400;
 }
 
-.planet-info {
+.destination-info {
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.planet-img {
+.destination-img {
   height: 10.625rem;
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
 }
 
-.planet-img-animation {
-  animation: planet-animation 0.8s cubic-bezier(0.03, 0.38, 0.64, 0.96);
+.destination-img-animation {
+  animation: destination-animation 0.8s cubic-bezier(0.03, 0.38, 0.64, 0.96);
 }
 
-@keyframes planet-animation {
+@keyframes destination-animation {
   0% {
     transform: translateY(10rem) scale(0.4);
     opacity: 0.1;
@@ -143,14 +143,14 @@ a {
   }
 }
 
-.planet-names {
+.destination-names {
   display: flex;
   justify-content: space-between;
   width: 14.84375rem;
   height: 1.75rem;
 }
 
-.planet-names li {
+.destination-names li {
   cursor: pointer;
   color: #d0d6f9;
   letter-spacing: 2.3625px;
@@ -160,16 +160,16 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-.planet-names li:hover {
+.destination-names li:hover {
   border-bottom: 3px solid #ffffff;
 }
 
-.selected-planet {
+.selected-destination {
   color: #ffffff !important;
   border-bottom-color: #ffffff !important;
 }
 
-.planet-info h1 {
+.destination-info h1 {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bellefair", sans-serif;
@@ -178,7 +178,7 @@ a {
   padding-top: 1.25rem;
 }
 
-.planet-info p {
+.destination-info p {
   color: #d0d6f9;
   text-align: center;
   width: 20rem;
@@ -190,7 +190,7 @@ a {
   position: relative;
 }
 
-.planet-info p::after {
+.destination-info p::after {
   position: absolute;
   content: "";
   background: #383b4b;
@@ -200,7 +200,7 @@ a {
   height: 1px;
 }
 
-.planet-details {
+.destination-details {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -208,7 +208,7 @@ a {
   align-items: center;
 }
 
-.planet-details h5 {
+.destination-details h5 {
   color: #d0d6f9;
   letter-spacing: 2.3625px;
   font-size: 0.875rem;
@@ -216,7 +216,7 @@ a {
   padding-top: 2rem;
 }
 
-.planet-details h2 {
+.destination-details h2 {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
@@ -309,31 +309,31 @@ a {
     height: 18.75rem;
   }
 
-  .planet-names {
+  .destination-names {
     height: 2.125rem;
     width: 17.875rem;
   }
 
-  .planet-names li {
+  .destination-names li {
     font-size: 1rem;
   }
 
-  .planet-info h1 {
+  .destination-info h1 {
     font-size: 5rem;
     padding-top: 2rem;
   }
 
-  .planet-info p {
+  .destination-info p {
     width: 35.75rem;
     height: 8.25rem;
     font-size: 1rem;
   }
 
-  .planet-info p::after {
+  .destination-info p::after {
     width: 35.75rem;
   }
 
-  .planet-details {
+  .destination-details {
     flex-direction: row;
     justify-content: space-evenly;
     width: 35.75rem;
@@ -408,18 +408,18 @@ a {
     margin: 0;
   }
 
-  .planet-info {
+  .destination-info {
     align-items: flex-start;
     width: 27.75rem;
   }
 
-  .planet-info h1 {
+  .destination-info h1 {
     font-size: 6.25rem;
     padding-top: 2.25rem;
     padding-bottom: 0.875rem;
   }
 
-  .planet-info p {
+  .destination-info p {
     text-align: start;
     line-height: 2rem;
     width: inherit;
@@ -428,17 +428,17 @@ a {
     padding-bottom: 3.375rem;
   }
 
-  .planet-info p::after {
+  .destination-info p::after {
     width: 27.75rem;
   }
 
-  .planet-details {
+  .destination-details {
     text-align: start;
     justify-content: space-between;
     width: 21.25rem;
   }
 
-  .planet-details h5 {
+  .destination-details h5 {
     padding-top: 1.75rem;
   }
 }

@@ -10,12 +10,12 @@ const overlay = document.querySelector(".overlay");
 /**
  * Elements in the container
  */
-const planetNames = document.querySelector(".planet-names");
-const planetImg = document.querySelector(".container img");
-const planetInfo = document.querySelector(".planet-info h1");
-const planetDescription = document.querySelector(".planet-info p");
-const planetDistance = document.querySelector(".distance");
-const planetTravel = document.querySelector(".travel");
+const destinationNames = document.querySelector(".destination-names");
+const destinationImg = document.querySelector(".container img");
+const destinationInfo = document.querySelector(".destination-info h1");
+const destinationDescription = document.querySelector(".destination-info p");
+const destinationDistance = document.querySelector(".distance");
+const destinationTravel = document.querySelector(".travel");
 
 /**
  * Function that hides and display the overlay link counter when in mobile view
@@ -30,15 +30,15 @@ close.addEventListener("click", showLinks);
 /**
  * Updates the UI based on the given arguments.
  * @param {Object} data - Object from the local json file.
- * @param {Number} planetNum - Data id of selected planet.
+ * @param {Number} destinationNum - Data id of selected destination.
  */
-const updateUI = function (data, planetNum) {
-  const planetData = data.destinations[planetNum];
-  planetInfo.textContent = planetData.name;
-  planetDescription.textContent = planetData.description;
-  planetDistance.textContent = planetData.distance;
-  planetTravel.textContent = planetData.travel;
-  planetImg.src = `/assets/destination/image-${planetData.name}.png`;
+const updateUI = function (data, destinationNum) {
+  const destinationData = data.destinations[destinationNum];
+  destinationInfo.textContent = destinationData.name;
+  destinationDescription.textContent = destinationData.description;
+  destinationDistance.textContent = destinationData.distance;
+  destinationTravel.textContent = destinationData.travel;
+  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
 };
 
 /**
@@ -56,36 +56,38 @@ const getJSON = async function () {
 };
 
 /**
- * Render the planet animation and reset the animation when switching.
+ * Render the destination animation and reset the animation when switching.
  */
-const resetPlanetAnimation = function () {
-  planetImg.classList.remove("planet-img-animation");
-  void planetImg.offsetWidth;
-  planetImg.classList.add("planet-img-animation");
+const resetDestinationAnimation = function () {
+  destinationImg.classList.remove("destination-img-animation");
+  void destinationImg.offsetWidth;
+  destinationImg.classList.add("destination-img-animation");
 };
 
 /**
- * Displays UI for selected planet.
- * @param {Element} selectedPlanet - Selected planet's element.
+ * Displays UI for selected destination.
+ * @param {Element} selecteddestination - Selected destination's element.
  */
-const displaySelectedPlanet = function (selectedPlanet) {
-  planetNames
+const displaySelectedDestination = function (selectedDestination) {
+  destinationNames
     .querySelectorAll("li")
-    .forEach((planet) => planet.classList.remove("selected-planet"));
-  selectedPlanet.classList.add("selected-planet");
+    .forEach((destination) =>
+      destination.classList.remove("selected-destination")
+    );
+  selectedDestination.classList.add("selected-destination");
 };
 
 /**
- * Handles all the changes that occurs when switching planets.
+ * Handles all the changes that occurs when switching destinations.
  */
-planetNames.addEventListener("click", function (e) {
+destinationNames.addEventListener("click", function (e) {
   e.preventDefault();
 
   const selected = e.target.closest("li");
   const selectedId = selected.dataset.id;
   if (!selected) return;
 
-  resetPlanetAnimation();
-  displaySelectedPlanet(selected);
+  resetDestinationAnimation();
+  displaySelectedDestination(selected);
   getJSON().then((data) => updateUI(data, selectedId));
 });
