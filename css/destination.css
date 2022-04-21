@@ -49,6 +49,10 @@ a {
   height: 1.3125rem;
 }
 
+.nav-links-container {
+  display: none;
+}
+
 .overlay {
   visibility: hidden;
   position: absolute;
@@ -104,13 +108,6 @@ a {
   font-weight: 700;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Barlow Condensed", sans-serif;
-}
-
 .intro {
   text-align: center;
   color: #ffffff;
@@ -125,6 +122,13 @@ a {
   opacity: 0.25;
   padding-right: 1rem;
   font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .destination-info {
@@ -143,7 +147,7 @@ a {
 }
 
 .destination-img-animation {
-  animation: destination-animation 0.8s cubic-bezier(0.81, 0.36, 0.17, 0.96);
+  animation: destination-animation 0.6s cubic-bezier(0.81, 0.36, 0.17, 0.96);
 }
 
 @keyframes destination-animation {
