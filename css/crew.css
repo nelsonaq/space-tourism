@@ -258,7 +258,7 @@ a {
     position: relative;
   }
 
-  .nav-links li:nth-child(2)::after {
+  .nav-links li:nth-child(3)::after {
     transform: scaleX(1);
   }
 

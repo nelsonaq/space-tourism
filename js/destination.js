@@ -86,11 +86,11 @@ const displaySelectedDestination = function (selectedDestination) {
 destinationNames.addEventListener("click", function (e) {
   e.preventDefault();
 
-  const selected = e.target.closest("li");
-  const selectedId = selected.dataset.id;
-  if (!selected) return;
+  const selectedDestination = e.target.closest("li");
+  const selectedDestinationId = selectedDestination.dataset.id;
+  if (!selectedDestination) return;
 
   resetDestinationAnimation();
-  displaySelectedDestination(selected);
-  getJSON().then((data) => updateUI(data, selectedId));
+  displaySelectedDestination(selectedDestination);
+  getJSON().then((data) => updateUI(data, selectedDestinationId));
 });
