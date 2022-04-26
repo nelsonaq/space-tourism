@@ -159,7 +159,7 @@ a {
   margin-top: 2rem;
 }
 
-.dots {
+.dots-container {
   width: 5.5rem;
   display: flex;
   justify-content: space-between;
@@ -187,6 +187,7 @@ a {
 }
 
 .crew-info h4 {
+  text-transform: uppercase;
   padding-bottom: 0.5rem;
   color: #ffffff;
   opacity: 0.5;
@@ -195,6 +196,7 @@ a {
 }
 
 .crew-info h3 {
+  text-transform: uppercase;
   padding-bottom: 1rem;
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
@@ -302,14 +304,17 @@ a {
   }
 
   .crew-info-container {
+    width: auto;
     margin-top: 0;
-    width: 28.625rem;
     height: 14.5rem;
     flex-direction: column-reverse;
   }
 
   .crew-info {
+    min-width: 28.625rem;
+    max-width: 37rem;
     padding-top: 0;
+    padding-bottom: 2.5rem;
   }
 
   .crew-info h4 {
@@ -385,27 +390,29 @@ a {
   .container {
     padding-top: 0;
     padding-left: 10.375rem;
-    padding-right: min(50rem, 10%);
     flex-direction: row-reverse;
     justify-content: start;
   }
 
   .crew-img {
-    padding-left: 4rem;
-    width: 35.5rem;
-    height: 44.5rem;
+    width: auto;
+    height: auto;
     position: absolute;
+    right: 45%;
+    transform: translateX(100%);
     bottom: 0;
   }
 
   .crew-info-container {
     align-items: flex-start;
     padding-top: 9rem;
-    width: 30.5rem;
+    width: 100%;
     height: 100%;
   }
 
   .crew-info {
+    max-width: 38.375rem;
+    height: 25.625rem;
     align-items: flex-start;
   }
 
@@ -427,7 +434,7 @@ a {
     padding-bottom: 7.5rem;
   }
 
-  .dots {
+  .dots-container {
     width: 8.25rem;
   }
 

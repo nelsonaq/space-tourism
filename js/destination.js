@@ -31,20 +31,6 @@ close.addEventListener("click", showLinks);
 overlay.addEventListener("click", showLinks);
 
 /**
- * Updates the UI based on the given arguments.
- * @param {Object} data - Object from the local json file.
- * @param {Number} destinationNum - Data id of selected destination.
- */
-const updateUI = function (data, destinationNum) {
-  const destinationData = data.destinations[destinationNum];
-  destinationInfo.textContent = destinationData.name;
-  destinationDescription.textContent = destinationData.description;
-  destinationDistance.textContent = destinationData.distance;
-  destinationTravel.textContent = destinationData.travel;
-  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
-};
-
-/**
  * Handles fetching the local data json file.
  * @returns {Promise/Object} - Promise that contains the data object of the json file.
  */
@@ -56,6 +42,20 @@ const getJSON = async function () {
   } catch (error) {
     console.error(error);
   }
+};
+
+/**
+ * Updates the UI based on the given arguments.
+ * @param {Object} data - Object from the local json file.
+ * @param {Number} destinationNum - Data id of selected destination.
+ */
+const updateUI = function (data, destinationNum) {
+  const destinationData = data.destinations[destinationNum];
+  destinationInfo.textContent = destinationData.name;
+  destinationDescription.textContent = destinationData.description;
+  destinationDistance.textContent = destinationData.distance;
+  destinationTravel.textContent = destinationData.travel;
+  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
 };
 
 /**
@@ -87,10 +87,12 @@ destinationNames.addEventListener("click", function (e) {
   e.preventDefault();
 
   const selectedDestination = e.target.closest("li");
-  const selectedDestinationId = selectedDestination.dataset.id;
+  //* Guard Clause
   if (!selectedDestination) return;
+
+  const selectedDestinationID = selectedDestination.dataset.id;
 
   resetDestinationAnimation();
   displaySelectedDestination(selectedDestination);
-  getJSON().then((data) => updateUI(data, selectedDestinationId));
+  getJSON().then((data) => updateUI(data, selectedDestinationID));
 });
