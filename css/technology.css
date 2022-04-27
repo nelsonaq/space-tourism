@@ -126,7 +126,7 @@ a {
 }
 
 .container {
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .tech-img {
@@ -274,7 +274,7 @@ a {
   }
 
   .container {
-    padding-top: 3.75rem;
+    margin-top: 3.75rem;
   }
 
   .tech-img {
@@ -367,5 +367,59 @@ a {
     font-size: 1.75rem;
     padding-top: 4.75rem;
     padding-left: 10.375rem;
+  }
+
+  .container {
+    margin-top: 1.625rem;
+    position: relative;
+  }
+
+  .tech-img {
+    background: url("/assets/technology/image-launch-vehicle-portrait.jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32.25rem;
+    height: 33rem;
+  }
+
+  .tech-container {
+    padding-left: 10.25rem;
+    flex-direction: row;
+    height: 33rem;
+  }
+
+  .btn-nums {
+    padding-bottom: 0;
+    flex-direction: column;
+    height: 19rem;
+    width: 5rem;
+  }
+
+  .btn-num {
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .tech-info {
+    text-align: start;
+    width: 29.375rem;
+    margin-left: 5rem;
+  }
+
+  .tech-info h5 {
+    padding-bottom: 0.6875rem;
+  }
+
+  .tech-info h2 {
+    font-size: 3.5rem;
+  }
+
+  .tech-info p {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    width: 27.75rem;
   }
 }
