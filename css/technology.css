@@ -272,6 +272,45 @@ a {
     padding-left: 2.375rem;
     padding-top: 2.5rem;
   }
+
+  .container {
+    padding-top: 3.75rem;
+  }
+
+  .tech-img {
+    height: 19.375rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .btn-nums {
+    width: 13.125rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .btn-num {
+    font-size: 1.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .tech-info {
+    width: 28.625rem;
+  }
+
+  .tech-info h5 {
+    letter-spacing: 2.7px;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .tech-info h2 {
+    font-size: 2.5rem;
+  }
+
+  .tech-info p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 89.9375rem) {
