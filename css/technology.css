@@ -391,8 +391,7 @@ a {
 
   .tech-img-portrait {
     display: block;
-    background: url("/assets/technology/image-launch-vehicle-portrait.jpg")
-      no-repeat;
+    background: url("/assets/technology/image-launch-vehicle-portrait.jpg");
     position: absolute;
     top: 0;
     right: 0;
