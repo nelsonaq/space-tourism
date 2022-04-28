@@ -162,6 +162,7 @@ a {
 }
 
 .num-btn {
+  cursor: pointer;
   font-family: "Bellefair", sans-serif;
   font-size: 1rem;
   color: #ffffff;
