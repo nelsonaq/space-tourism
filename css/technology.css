@@ -154,14 +154,14 @@ a {
   align-items: center;
 }
 
-.btn-nums {
+.num-btns {
   display: flex;
   justify-content: space-between;
   width: 9.5rem;
   padding-bottom: 1.625rem;
 }
 
-.btn-num {
+.num-btn {
   font-family: "Bellefair", sans-serif;
   font-size: 1rem;
   color: #ffffff;
@@ -172,7 +172,7 @@ a {
   border-radius: 50%;
 }
 
-.selected-btn {
+.selected-num {
   color: #0b0d17;
   background-color: #ffffff;
 }
@@ -293,12 +293,12 @@ a {
     margin-bottom: 3.5rem;
   }
 
-  .btn-nums {
+  .num-btns {
     width: 13.125rem;
     padding-bottom: 2.75rem;
   }
 
-  .btn-num {
+  .num-btn {
     font-size: 1.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -405,14 +405,14 @@ a {
     height: 33rem;
   }
 
-  .btn-nums {
+  .num-btns {
     padding-bottom: 0;
     flex-direction: column;
     height: 19rem;
     width: 5rem;
   }
 
-  .btn-num {
+  .num-btn {
     font-size: 2rem;
     width: 5rem;
     height: 5rem;
