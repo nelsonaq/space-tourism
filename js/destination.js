@@ -13,7 +13,7 @@ const overlay = document.querySelector(".overlay");
  */
 const destinationNames = document.querySelector(".destination-names");
 const destinationImg = document.querySelector(".container img");
-const destinationInfo = document.querySelector(".destination-info h2");
+const destinationName = document.querySelector(".destination-info h2");
 const destinationDescription = document.querySelector(".destination-info p");
 const destinationDistance = document.querySelector(".distance");
 const destinationTravel = document.querySelector(".travel");
@@ -52,19 +52,35 @@ const getJSON = async function () {
 const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
   destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
-  destinationInfo.textContent = destinationData.name;
+  destinationName.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;
   destinationDistance.textContent = destinationData.distance;
   destinationTravel.textContent = destinationData.travel;
 };
 
 /**
- * Render the destination animation and reset the animation when switching.
+ * Render the destination animation and reset the animation when switching destination.
  */
 const resetDestinationAnimation = function () {
-  destinationImg.classList.remove("destination-img-animation");
-  void destinationImg.offsetWidth;
-  destinationImg.classList.add("destination-img-animation");
+  destinationImg.style.animation = "none";
+  destinationImg.offsetWidth;
+  destinationImg.style.animation = null;
+
+  destinationName.style.animation = "none";
+  destinationName.offsetWidth;
+  destinationName.style.animation = null;
+
+  destinationDescription.style.animation = "none";
+  destinationDescription.offsetWidth;
+  destinationDescription.style.animation = null;
+
+  destinationDistance.style.animation = "none";
+  destinationDistance.offsetWidth;
+  destinationDistance.style.animation = null;
+
+  destinationTravel.style.animation = "none";
+  destinationTravel.offsetWidth;
+  destinationTravel.style.animation = null;
 };
 
 /**
@@ -90,7 +106,9 @@ destinationNames.addEventListener("click", function (e) {
   //* Guard Clause
   if (!selectedDestination) return;
 
+  //* Does not update UI if selectedDestination has been selected
   const selectedDestinationID = selectedDestination.dataset.id;
+  if (selectedDestination.classList.contains("selected-destination")) return;
 
   resetDestinationAnimation();
   displaySelectedDestination(selectedDestination);

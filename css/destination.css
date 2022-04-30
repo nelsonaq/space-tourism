@@ -14,6 +14,54 @@ a {
   font-size: 1rem;
 }
 
+@keyframes right-slide {
+  from {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes left-slide {
+  from {
+    transform: translateX(12rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes up-slide {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes down-slide {
+  from {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
 .main-container {
   background-image: url(/assets/destination/background-destination-mobile.jpg);
   background-size: cover;
@@ -115,6 +163,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -144,27 +193,7 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-}
-
-.destination-img-animation {
-  animation: destination-animation 0.6s cubic-bezier(0.81, 0.36, 0.17, 0.96);
-}
-
-@keyframes destination-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(20rem) scale(0.1);
-    opacity: 0;
-  }
-  51% {
-    transform: translateX(-20rem) scale(0.1);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-names {
@@ -184,14 +213,27 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
+.destination-names li:nth-child(2) {
+  animation: down-slide 0.4s cubic-bezier(0.97, 0.02, 0.33, 0.78);
+}
+
+.destination-names li:nth-child(3) {
+  animation: down-slide 0.6s cubic-bezier(0.97, 0.02, 0.33, 0.78);
+}
+
+.destination-names li:nth-child(4) {
+  animation: down-slide 0.8s cubic-bezier(0.97, 0.02, 0.33, 0.78);
+}
+
 .destination-names li:hover {
   border-bottom: 3px solid #ffffff;
 }
 
 .selected-destination {
-  transform: translateY(-1rem) scale(1.3);
+  transform: translateY(-1.25rem) scale(1.3);
   color: #ffffff !important;
   border-bottom-color: #ffffff !important;
+  transition: all 0.4s ease-in-out;
 }
 
 .destination-info h2 {
@@ -201,27 +243,29 @@ a {
   font-size: 3.5rem;
   font-weight: 400;
   padding-top: 1.25rem;
+  animation: left-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-info p {
   color: #d0d6f9;
   text-align: center;
-  width: 20rem;
+  width: 20.4375rem;
+  height: 9.8125rem;
   line-height: 1.5625rem;
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   font-weight: 300;
-  padding-bottom: 2rem;
   position: relative;
+  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-info p::after {
   position: absolute;
   content: "";
   background: #383b4b;
-  bottom: 0;
+  bottom: 0rem;
   left: 0;
-  width: 20.4375rem;
+  width: 100%;
   height: 1px;
 }
 
@@ -231,6 +275,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.distance {
+  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+}
+
+.travel {
+  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-details h3 {
@@ -354,10 +406,6 @@ a {
     font-size: 1rem;
   }
 
-  .destination-info p::after {
-    width: 35.75rem;
-  }
-
   .destination-details {
     flex-direction: row;
     justify-content: space-evenly;
@@ -459,10 +507,6 @@ a {
     height: fit-content;
     font-size: 1.125rem;
     padding-bottom: 3.375rem;
-  }
-
-  .destination-info p::after {
-    width: 27.75rem;
   }
 
   .destination-details {
