@@ -12,7 +12,7 @@ const btnNums = document.querySelector(".num-btns");
 const btnNumAll = document.querySelectorAll(".num-btn");
 const techImgPortrait = document.querySelector(".tech-img-portrait");
 const techImgLandscape = document.querySelector(".tech-img-landscape");
-const techName = document.querySelector(".tech-info h2");
+const techName = document.querySelector(".tech-info h3");
 const techDescription = document.querySelector(".tech-info p");
 
 /**

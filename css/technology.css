@@ -184,7 +184,7 @@ a {
   width: 20.375rem;
 }
 
-.tech-info h5 {
+.tech-info h2 {
   font-size: 0.875rem;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 300;
@@ -192,7 +192,7 @@ a {
   padding-bottom: 0.5625rem;
 }
 
-.tech-info h2 {
+.tech-info h3 {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -309,13 +309,13 @@ a {
     width: 28.625rem;
   }
 
-  .tech-info h5 {
+  .tech-info h2 {
     letter-spacing: 2.7px;
     font-size: 1rem;
     padding-bottom: 1rem;
   }
 
-  .tech-info h2 {
+  .tech-info h3 {
     font-size: 2.5rem;
   }
 
@@ -425,11 +425,11 @@ a {
     margin-left: 5rem;
   }
 
-  .tech-info h5 {
+  .tech-info h2 {
     padding-bottom: 0.6875rem;
   }
 
-  .tech-info h2 {
+  .tech-info h3 {
     font-size: 3.5rem;
   }
 
