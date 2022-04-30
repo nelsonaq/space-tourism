@@ -125,13 +125,13 @@ a {
   height: 17.25rem;
 }
 
-.introduction h4 {
+.introduction h1 {
   letter-spacing: 3px;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 300;
 }
 
-.introduction h1 {
+.introduction h2 {
   color: #ffffff;
   line-height: 6.25rem;
   font-size: 5rem;
@@ -244,7 +244,7 @@ a {
     height: 20.875rem;
   }
 
-  .introduction h1 {
+  .introduction h2 {
     font-size: 9.375rem;
   }
 
@@ -324,7 +324,7 @@ a {
     justify-content: space-around;
   }
 
-  .introduction h4 {
+  .introduction h1 {
     font-size: 1.75rem;
   }
 
