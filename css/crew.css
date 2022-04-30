@@ -443,6 +443,10 @@ a {
 }
 
 @media (min-width: 119.9375rem) {
+  .nav-links-container::after {
+    width: 57rem;
+  }
+
   .crew-info p {
     width: 40rem;
   }

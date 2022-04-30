@@ -442,6 +442,10 @@ a {
 }
 
 @media (min-width: 119.9375rem) {
+  .nav-links-container::after {
+    width: 57rem;
+  }
+
   .tech-img-portrait {
     right: 12rem;
   }
