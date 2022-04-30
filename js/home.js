@@ -12,7 +12,7 @@ const overlay = document.querySelector(".overlay");
  * Function that hides and display the overlay link counter when in mobile view
  */
 const showLinks = function () {
-  navDrawer.classList.toggle("hide-nav-drawer");
+  navDrawer.classList.toggle("display-nav-drawer");
   overlay.classList.toggle("display-overlay");
 };
 
