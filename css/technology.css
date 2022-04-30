@@ -396,8 +396,8 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    width: 32.25rem;
-    height: 33rem;
+    width: 32.1875rem;
+    height: 32.9375rem;
   }
 
   .tech-container {
@@ -421,6 +421,7 @@ a {
 
   .tech-info {
     text-align: start;
+    height: 19rem;
     width: 29.375rem;
     margin-left: 5rem;
   }
@@ -437,5 +438,15 @@ a {
     font-size: 1.125rem;
     line-height: 2rem;
     width: 27.75rem;
+  }
+}
+
+@media (min-width: 119.9375rem) {
+  .tech-img-portrait {
+    right: 12rem;
+  }
+
+  .tech-info p {
+    width: 40rem;
   }
 }
