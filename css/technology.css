@@ -69,8 +69,8 @@ a {
   visibility: visible;
 }
 
-.hide-nav-drawer {
-  transform: translateX(15.875rem);
+.display-nav-drawer {
+  transform: translateX(-15.875rem);
 }
 
 .nav-drawer {
@@ -79,7 +79,7 @@ a {
   backdrop-filter: blur(5rem);
   z-index: 2;
   top: 0;
-  right: 0;
+  right: -15.875rem;
   width: 15.875rem;
   height: 100vh;
   transition: all 0.5s cubic-bezier(0.75, 0.18, 0.27, 0.82);
