@@ -447,7 +447,11 @@ a {
     width: 57rem;
   }
 
+  .crew-img {
+    right: 42%;
+  }
+
   .crew-info p {
-    width: 40rem;
+    width: 45rem;
   }
 }
