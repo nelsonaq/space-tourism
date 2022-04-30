@@ -45,6 +45,27 @@ const updateUI = function (data, crewNum) {
   crewBio.textContent = crewData.bio;
 };
 
+/**
+ * Retriggers the animation when switching crew.
+ */
+const resetDestinationAnimation = function () {
+  crewImg.style.animation = "none";
+  crewImg.offsetWidth;
+  crewImg.style.animation = null;
+
+  crewRole.style.animation = "none";
+  crewRole.offsetWidth;
+  crewRole.style.animation = null;
+
+  crewName.style.animation = "none";
+  crewName.offsetWidth;
+  crewName.style.animation = null;
+
+  crewBio.style.animation = "none";
+  crewBio.offsetWidth;
+  crewBio.style.animation = null;
+};
+
 const displaySelectedDot = function (selectedDot) {
   dots.forEach((dot) => dot.classList.remove("selected-dot"));
   selectedDot.classList.add("selected-dot");
@@ -57,6 +78,10 @@ dotsContainer.addEventListener("click", function (e) {
   if (!selectedDot) return;
 
   const selectedDotID = selectedDot.dataset.id;
+
+  //* Does not update UI if selectedDestination has been selected
+  if (selectedDot.classList.contains("selected-dot")) return;
+  resetDestinationAnimation();
   displaySelectedDot(selectedDot);
   getJSON().then((data) => updateUI(data, selectedDotID));
 });

@@ -14,6 +14,63 @@ a {
   font-size: 1rem;
 }
 
+@keyframes right-slide {
+  from {
+    transform: translateX(-15rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes left-slide {
+  from {
+    transform: translateX(15rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes img-slide-mobile {
+  from {
+    transform: translateX(8rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes img-slide-tablet-desktop {
+  from {
+    transform: translateY(15rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes down-slide {
+  from {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0rem);
+  }
+}
+
 .main-container {
   background-image: url(/assets/crew/background-crew-mobile.jpg);
   background-size: cover;
@@ -21,7 +78,8 @@ a {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
+  position: relative;
 }
 
 .nav-bar {
@@ -116,6 +174,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -136,6 +195,7 @@ a {
   margin-top: 2.5rem;
   margin-left: 1rem;
   height: 13.875rem;
+  animation: img-slide-mobile 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info-container::after {
@@ -144,14 +204,16 @@ a {
   top: -2rem;
   left: 0;
   width: 20.5rem;
-  background: #383b4b;
   height: 1px;
+  z-index: 1;
+  background: #383b4b;
 }
 
 .crew-info-container {
   position: relative;
   width: 20.5rem;
   height: 13.25rem;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,6 +237,18 @@ a {
   border-radius: 50%;
 }
 
+.dot:nth-child(2) {
+  animation: left-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+}
+
+.dot:nth-child(3) {
+  animation: left-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+}
+
+.dot:nth-child(4) {
+  animation: left-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+}
+
 .selected-dot {
   opacity: 1;
 }
@@ -193,6 +267,7 @@ a {
   opacity: 0.5;
   font-family: "Bellefair", sans-serif;
   font-weight: 300;
+  animation: right-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info h3 {
@@ -202,6 +277,7 @@ a {
   font-family: "Bellefair", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
+  animation: right-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info p {
@@ -211,6 +287,7 @@ a {
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   font-weight: 300;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 @media (min-width: 47.9375rem) {
@@ -297,6 +374,7 @@ a {
 
   .crew-img {
     height: 35.75rem;
+    animation: img-slide-tablet-desktop 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .crew-info-container::after {
@@ -397,8 +475,7 @@ a {
     width: auto;
     height: auto;
     position: absolute;
-    right: 45%;
-    transform: translateX(100%);
+    left: 55%;
     bottom: 0;
   }
 
@@ -448,7 +525,7 @@ a {
   }
 
   .crew-img {
-    right: 42%;
+    left: 60%;
   }
 
   .crew-info p {

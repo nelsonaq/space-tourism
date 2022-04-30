@@ -59,7 +59,7 @@ const updateUI = function (data, destinationNum) {
 };
 
 /**
- * Render the destination animation and reset the animation when switching destination.
+ * Retriggers the animation when switching destination.
  */
 const resetDestinationAnimation = function () {
   destinationImg.style.animation = "none";
