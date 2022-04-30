@@ -81,7 +81,7 @@ dotsContainer.addEventListener("click", function (e) {
 
   //* Does not update UI if selectedDestination has been selected
   if (selectedDot.classList.contains("selected-dot")) return;
+  getJSON().then((data) => updateUI(data, selectedDotID));
   resetDestinationAnimation();
   displaySelectedDot(selectedDot);
-  getJSON().then((data) => updateUI(data, selectedDotID));
 });

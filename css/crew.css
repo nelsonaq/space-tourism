@@ -16,8 +16,8 @@ a {
 
 @keyframes right-slide {
   from {
-    transform: translateX(-15rem);
     opacity: 0;
+    transform: translateX(-15rem);
   }
 
   to {
@@ -27,8 +27,8 @@ a {
 
 @keyframes left-slide {
   from {
-    transform: translateX(15rem);
     opacity: 0;
+    transform: translateX(15rem);
   }
 
   to {
@@ -38,32 +38,32 @@ a {
 
 @keyframes img-slide-mobile {
   from {
-    transform: translateX(8rem);
     opacity: 0;
+    transform: translateX(8rem);
   }
 
   to {
-    transform: translateX(0);
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes img-slide-tablet-desktop {
   from {
-    transform: translateY(15rem);
     opacity: 0;
+    transform: translateY(15rem);
   }
 
   to {
-    transform: translateY(0rem);
     opacity: 1;
+    transform: translateY(0rem);
   }
 }
 
 @keyframes down-slide {
   from {
-    transform: translateY(-10rem);
     opacity: 0;
+    transform: translateY(-10rem);
   }
 
   to {

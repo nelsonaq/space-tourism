@@ -16,49 +16,49 @@ a {
 
 @keyframes right-slide {
   from {
-    transform: translateX(-30rem);
     opacity: 0;
+    transform: translateX(-30rem);
   }
 
   to {
-    transform: translateX(0rem);
     opacity: 1;
+    transform: translateX(0rem);
   }
 }
 
 @keyframes left-slide {
   from {
-    transform: translateX(12rem);
     opacity: 0;
+    transform: translateX(12rem);
   }
 
   to {
-    transform: translateX(0rem);
     opacity: 1;
+    transform: translateX(0rem);
   }
 }
 
 @keyframes up-slide {
   from {
-    transform: translateY(5rem);
     opacity: 0;
+    transform: translateY(5rem);
   }
 
   to {
-    transform: translateY(0rem);
     opacity: 1;
+    transform: translateY(0rem);
   }
 }
 
 @keyframes down-slide {
   from {
-    transform: translateY(-5rem);
     opacity: 0;
+    transform: translateY(-5rem);
   }
 
   to {
-    transform: translateY(0rem);
     opacity: 1;
+    transform: translateY(0rem);
   }
 }
 
@@ -68,7 +68,7 @@ a {
   background-position: center center;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .nav-bar {

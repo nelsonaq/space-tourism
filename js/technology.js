@@ -57,6 +57,6 @@ btnNums.addEventListener("click", function (e) {
   if (!selected) return;
   const selectedNum = selected.dataset.num;
 
-  displaySelectedNum(selected);
   getJSON().then((data) => updateUI(data, selectedNum));
+  displaySelectedNum(selected);
 });
