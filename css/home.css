@@ -14,7 +14,7 @@ a {
   font-size: 1rem;
 }
 
-@keyframes right-slide {
+@keyframes down-slide {
   from {
     transform: translateY(-30rem);
     opacity: 0;
