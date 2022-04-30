@@ -16,7 +16,7 @@ a {
 
 @keyframes down-slide {
   from {
-    transform: translateY(-30rem);
+    transform: translateY(-20rem);
     opacity: 0;
   }
 
@@ -25,14 +25,14 @@ a {
   }
 }
 
-@keyframes grow {
+@keyframes up-slide {
   from {
-    transform: scale(0.1);
+    transform: translateY(20rem);
     opacity: 0;
   }
 
   to {
-    transform: scale(1);
+    transform: translateY(0rem);
   }
 }
 
@@ -42,7 +42,7 @@ a {
   background-position: center center;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .nav-bar {
@@ -181,7 +181,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: grow 0.8s cubic-bezier(0.02, 0.35, 0.42, 0.94);
+  animation: up-slide 0.8s cubic-bezier(0.02, 0.35, 0.42, 0.94);
 }
 
 .circle a {
