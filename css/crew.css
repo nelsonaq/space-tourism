@@ -186,7 +186,7 @@ a {
   align-items: center;
 }
 
-.crew-info h4 {
+.crew-info h2 {
   text-transform: uppercase;
   padding-bottom: 0.5rem;
   color: #ffffff;
@@ -317,7 +317,7 @@ a {
     padding-bottom: 2.5rem;
   }
 
-  .crew-info h4 {
+  .crew-info h2 {
     font-size: 1.5rem;
   }
 
@@ -416,7 +416,7 @@ a {
     align-items: flex-start;
   }
 
-  .crew-info h4 {
+  .crew-info h2 {
     font-size: 2rem;
     padding-bottom: 1rem;
   }

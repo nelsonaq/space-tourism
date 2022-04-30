@@ -11,7 +11,7 @@ const overlay = document.querySelector(".overlay");
 const dotsContainer = document.querySelector(".dots-container");
 const dots = document.querySelectorAll(".dot");
 const crewImg = document.querySelector(".crew-img");
-const crewRole = document.querySelector(".crew-info h4");
+const crewRole = document.querySelector(".crew-info h2");
 const crewName = document.querySelector(".crew-info h3");
 const crewBio = document.querySelector(".crew-info p");
 
