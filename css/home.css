@@ -14,13 +14,13 @@ a {
   font-size: 1rem;
 }
 
-body {
+.main-container {
   background-image: url(/assets/home/background-home-mobile.jpg);
   background-size: cover;
   background-position: center center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -166,7 +166,7 @@ body {
 }
 
 @media (min-width: 47.9375rem) {
-  body {
+  .main-container {
     background: url(/assets/home/background-home-tablet.jpg);
     background-size: cover;
     background-position: center;
@@ -241,7 +241,7 @@ body {
 
   .introduction {
     width: 28.125rem;
-    height: 23.875rem;
+    height: 20.875rem;
   }
 
   .introduction h1 {
@@ -270,7 +270,7 @@ body {
 }
 
 @media (min-width: 89.9375rem) {
-  body {
+  .main-container {
     background: url(/assets/home/background-home-desktop.jpg);
     background-size: cover;
     background-position: center;
