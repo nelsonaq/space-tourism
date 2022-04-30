@@ -311,8 +311,7 @@ a {
   }
 
   .crew-info {
-    min-width: 28.625rem;
-    max-width: 37rem;
+    width: 28.625rem;
     padding-top: 0;
     padding-bottom: 2.5rem;
   }
@@ -411,7 +410,6 @@ a {
   }
 
   .crew-info {
-    max-width: 38.375rem;
     height: 25.625rem;
     align-items: flex-start;
   }
@@ -422,6 +420,7 @@ a {
   }
 
   .crew-info h3 {
+    width: 38.375rem;
     font-size: 3.5rem;
     padding-bottom: 1.75rem;
   }
@@ -429,7 +428,6 @@ a {
   .crew-info p {
     text-align: start;
     line-height: 2rem;
-    width: 27.5rem;
     font-size: 1.125rem;
     padding-bottom: 7.5rem;
   }
@@ -441,5 +439,11 @@ a {
   .dot {
     width: 1rem;
     height: 1rem;
+  }
+}
+
+@media (min-width: 119.9375rem) {
+  .crew-info p {
+    width: 40rem;
   }
 }
