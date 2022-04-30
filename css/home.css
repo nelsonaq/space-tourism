@@ -38,18 +38,6 @@ a {
   }
 }
 
-@keyframes shrink {
-  from {
-    transform: scale(2);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .main-container {
   background-image: url(/assets/home/background-home-mobile.jpg);
   background-size: cover;
@@ -165,7 +153,7 @@ a {
   letter-spacing: 3px;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 300;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: down-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .introduction h2 {
@@ -174,7 +162,7 @@ a {
   font-size: 5rem;
   font-family: "Bellefair", serif;
   font-weight: 400;
-  animation: right-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: down-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .introduction p {
@@ -182,7 +170,7 @@ a {
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   font-weight: 300;
-  animation: right-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: down-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .circle {
