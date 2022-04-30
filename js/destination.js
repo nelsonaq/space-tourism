@@ -13,7 +13,7 @@ const overlay = document.querySelector(".overlay");
  */
 const destinationNames = document.querySelector(".destination-names");
 const destinationImg = document.querySelector(".container img");
-const destinationInfo = document.querySelector(".destination-info h1");
+const destinationInfo = document.querySelector(".destination-info h2");
 const destinationDescription = document.querySelector(".destination-info p");
 const destinationDistance = document.querySelector(".distance");
 const destinationTravel = document.querySelector(".travel");
@@ -51,11 +51,11 @@ const getJSON = async function () {
  */
 const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
+  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
   destinationInfo.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;
   destinationDistance.textContent = destinationData.distance;
   destinationTravel.textContent = destinationData.travel;
-  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
 };
 
 /**

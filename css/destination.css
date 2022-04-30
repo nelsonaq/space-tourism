@@ -194,7 +194,7 @@ a {
   border-bottom-color: #ffffff !important;
 }
 
-.destination-info h1 {
+.destination-info h2 {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bellefair", sans-serif;
@@ -233,7 +233,7 @@ a {
   align-items: center;
 }
 
-.destination-details h5 {
+.destination-details h3 {
   color: #d0d6f9;
   letter-spacing: 2.3625px;
   font-size: 0.875rem;
@@ -241,7 +241,7 @@ a {
   padding-top: 2rem;
 }
 
-.destination-details h2 {
+.destination-details h4 {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Bellefair", sans-serif;
@@ -343,7 +343,7 @@ a {
     font-size: 1rem;
   }
 
-  .destination-info h1 {
+  .destination-info h2 {
     font-size: 5rem;
     padding-top: 2rem;
   }
@@ -442,7 +442,7 @@ a {
     width: 27.75rem;
   }
 
-  .destination-info h1 {
+  .destination-info h2 {
     font-size: 6.25rem;
     padding-top: 2.25rem;
     padding-bottom: 0.875rem;
@@ -467,7 +467,7 @@ a {
     width: 21.25rem;
   }
 
-  .destination-details h5 {
+  .destination-details h3 {
     padding-top: 1.75rem;
   }
 }
