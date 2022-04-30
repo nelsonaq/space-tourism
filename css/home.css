@@ -295,7 +295,7 @@ a {
     content: "";
     top: 3rem;
     right: 50rem;
-    min-width: 29.5625rem;
+    width: 29.5625rem;
     height: 1px;
     background: #ffffff;
     opacity: 0.25;
@@ -320,8 +320,15 @@ a {
   }
 
   .container {
+    padding-top: 15.625rem;
+    padding-bottom: 0;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .introduction {
+    text-align: start;
+    height: 23.875rem;
   }
 
   .introduction h1 {
@@ -334,7 +341,32 @@ a {
   }
 
   .circle {
+    margin-top: 0;
+    align-self: flex-end;
     width: 17.125rem;
     height: 17.125rem;
+  }
+}
+
+@media (min-width: 119.9375rem) {
+  .container {
+    padding-top: 13.25rem;
+  }
+
+  .nav-links-container::after {
+    width: 57rem;
+  }
+
+  .introduction {
+    width: 45rem;
+  }
+
+  .circle {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .circle span {
+    font-size: 2.25rem;
   }
 }
