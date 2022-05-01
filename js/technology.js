@@ -45,6 +45,24 @@ const updateUI = function (data, techNum) {
   techDescription.textContent = techData.description;
 };
 
+const resetDestinationAnimation = function () {
+  techImgLandscape.style.animation = "none";
+  techImgLandscape.offsetWidth;
+  techImgLandscape.style.animation = null;
+
+  techImgPortrait.style.animation = "none";
+  techImgPortrait.offsetWidth;
+  techImgPortrait.style.animation = null;
+
+  techName.style.animation = "none";
+  techName.offsetWidth;
+  techName.style.animation = null;
+
+  techDescription.style.animation = "none";
+  techDescription.offsetWidth;
+  techDescription.style.animation = null;
+};
+
 const displaySelectedNum = function (selected) {
   btnNumAll.forEach((btnNum) => btnNum.classList.remove("selected-num"));
   selected.classList.add("selected-num");
@@ -56,7 +74,8 @@ btnNums.addEventListener("click", function (e) {
   //* Guard Clause
   if (!selected) return;
   const selectedNum = selected.dataset.num;
-
+  if (selected.classList.contains("selected-num")) return;
   getJSON().then((data) => updateUI(data, selectedNum));
+  resetDestinationAnimation();
   displaySelectedNum(selected);
 });

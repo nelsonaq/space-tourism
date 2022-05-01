@@ -14,6 +14,75 @@ a {
   font-size: 1rem;
 }
 
+@keyframes right-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes num-left-slide {
+  from {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes image-slide-mobile {
+  from {
+    opacity: 0;
+    width: 0%;
+    transform: translateX(30rem);
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes image-slide-tablet {
+  from {
+    opacity: 0;
+    width: 0%;
+    transform: translateX(50rem);
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes image-slide-desktop {
+  from {
+    opacity: 0;
+    height: 0%;
+    transform: translateY(40rem);
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes up-slide {
+  from {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+
+  to {
+    transform: translateY(0rem);
+  }
+}
+
 .main-container {
   background-image: url(/assets/technology/background-technology-mobile.jpg);
   background-size: cover;
@@ -21,7 +90,7 @@ a {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .nav-bar {
@@ -116,6 +185,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -134,6 +204,7 @@ a {
     bottom / cover;
   height: 10.625rem;
   margin-bottom: 2.125rem;
+  animation: image-slide-mobile 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-img-portrait {
@@ -165,6 +236,14 @@ a {
   border-radius: 50%;
 }
 
+.num-btn:nth-child(2) {
+  animation: num-left-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+}
+
+.num-btn:nth-child(3) {
+  animation: num-left-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+}
+
 .selected-num {
   color: #0b0d17;
   background-color: #ffffff;
@@ -182,6 +261,7 @@ a {
   font-weight: 300;
   letter-spacing: 2.3625px;
   padding-bottom: 0.5625rem;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-info h3 {
@@ -191,6 +271,7 @@ a {
   font-family: "Bellefair", sans-serif;
   font-weight: 300;
   padding-bottom: 1rem;
+  animation: right-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-info p {
@@ -198,6 +279,7 @@ a {
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   line-height: 1.5625rem;
+  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 @media (min-width: 47.9375rem) {
@@ -284,6 +366,7 @@ a {
   .tech-img-landscape {
     height: 19.375rem;
     margin-bottom: 3.5rem;
+    animation: image-slide-tablet 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .num-btns {
@@ -295,6 +378,14 @@ a {
     font-size: 1.5rem;
     width: 3.75rem;
     height: 3.75rem;
+  }
+
+  .num-btn:nth-child(2) {
+    animation: num-left-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+  }
+
+  .num-btn:nth-child(3) {
+    animation: num-left-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
   }
 
   .tech-info {
@@ -390,6 +481,7 @@ a {
     right: 0;
     width: 32.1875rem;
     height: 32.9375rem;
+    animation: image-slide-desktop 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .tech-container {
@@ -411,6 +503,14 @@ a {
     height: 5rem;
   }
 
+  .num-btn:nth-child(2) {
+    animation: up-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+  }
+
+  .num-btn:nth-child(3) {
+    animation: up-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+  }
+
   .tech-info {
     text-align: start;
     height: 19rem;
@@ -424,12 +524,14 @@ a {
 
   .tech-info h3 {
     font-size: 3.5rem;
+    animation: up-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .tech-info p {
     font-size: 1.125rem;
     line-height: 2rem;
     width: 27.75rem;
+    animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 }
 
