@@ -28,18 +28,16 @@ a {
 
 @keyframes destination-right-slide {
   0% {
-    opacity: 0;
-    transform: translateX(-30rem);
+    opacity: 1;
   }
 
   50% {
-    opacity: 0;
-    transform: translateX(-30rem);
+    opacity: 0.2;
+    filter: grayscale(100%);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0rem);
   }
 }
 
@@ -210,7 +208,7 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-  animation: destination-right-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: destination-right-slide 3s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-names {
