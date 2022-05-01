@@ -62,7 +62,7 @@ a {
 @keyframes up-slide {
   from {
     opacity: 0;
-    transform: translateY(5rem);
+    transform: translateY(10rem);
   }
 
   to {
@@ -184,7 +184,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -214,7 +214,7 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-  animation: destination-right-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: destination-right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-names {
@@ -235,15 +235,15 @@ a {
 }
 
 .destination-names li:nth-child(2) {
-  animation: down-slide 0.4s cubic-bezier(0.97, 0.02, 0.33, 0.78);
-}
-
-.destination-names li:nth-child(3) {
   animation: down-slide 0.6s cubic-bezier(0.97, 0.02, 0.33, 0.78);
 }
 
-.destination-names li:nth-child(4) {
+.destination-names li:nth-child(3) {
   animation: down-slide 0.8s cubic-bezier(0.97, 0.02, 0.33, 0.78);
+}
+
+.destination-names li:nth-child(4) {
+  animation: down-slide 1s cubic-bezier(0.97, 0.02, 0.33, 0.78);
 }
 
 .destination-names li:hover {
@@ -277,7 +277,7 @@ a {
   font-size: 0.9375rem;
   font-weight: 300;
   position: relative;
-  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-info p::after {
@@ -299,11 +299,11 @@ a {
 }
 
 .distance {
-  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .travel {
-  animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-details h3 {
