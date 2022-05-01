@@ -110,7 +110,9 @@ destinationNames.addEventListener("click", function (e) {
   const selectedDestinationID = selectedDestination.dataset.id;
   if (selectedDestination.classList.contains("selected-destination")) return;
 
-  getJSON().then((data) => updateUI(data, selectedDestinationID));
-  resetDestinationAnimation();
-  displaySelectedDestination(selectedDestination);
+  getJSON().then((data) => {
+    updateUI(data, selectedDestinationID);
+    displaySelectedDestination(selectedDestination);
+    resetDestinationAnimation();
+  });
 });
