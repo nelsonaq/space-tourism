@@ -172,24 +172,20 @@ a {
 }
 
 .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bellefair", serif;
+  font-size: 1.25rem;
+  letter-spacing: 1.25px;
+  color: #0b0d17;
   cursor: pointer;
   margin-top: 5.0625rem;
   background-color: #ffffff;
   width: 9.375rem;
   height: 9.375rem;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: up-slide 0.8s cubic-bezier(0.02, 0.35, 0.42, 0.94);
-}
-
-.circle a {
-  font-family: "Bellefair", serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 1.25px;
-  color: #0b0d17;
 }
 
 @media (min-width: 47.9375rem) {
@@ -281,14 +277,11 @@ a {
   }
 
   .circle {
+    font-size: 2rem;
     margin-top: 9.75rem;
     width: 15.125rem;
     height: 15.125rem;
     transition: box-shadow 0.4s ease-in-out;
-  }
-
-  .circle a {
-    font-size: 2rem;
   }
 
   .circle:hover {
@@ -391,9 +384,6 @@ a {
   .circle {
     width: 20rem;
     height: 20rem;
-  }
-
-  .circle a {
     font-size: 2.25rem;
   }
 }
