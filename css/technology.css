@@ -129,14 +129,6 @@ a {
   margin-top: 2rem;
 }
 
-/* .tech-img {
-  background: url("/assets/technology/image-launch-vehicle-portrait.jpg") center
-    bottom;
-  height: 10.625rem;
-  background-size: cover;
-  margin-bottom: 2.125rem;
-} */
-
 .tech-img-landscape {
   background: url("/assets/technology/image-launch-vehicle-landscape.jpg")
     bottom / cover;
