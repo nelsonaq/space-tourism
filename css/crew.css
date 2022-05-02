@@ -73,19 +73,13 @@ a {
 
 @keyframes img-slide-tablet-desktop {
   0% {
-    opacity: 1;
-  }
-
-  20% {
     opacity: 0;
-    filter: blur(2rem);
-    transform: translateY(0);
   }
 
   60% {
     opacity: 0;
-    filter: blur(2rem);
-    transform: translateY(100%);
+    filter: blur(0.25rem);
+    transform: translateY(10%);
   }
 
   100% {
