@@ -49,25 +49,25 @@ a {
 }
 
 @keyframes img-slide-tablet-desktop {
-  from {
-    opacity: 0;
-    transform: translateY(15rem);
-  }
-
-  to {
+  0% {
     opacity: 1;
-    transform: translateY(0rem);
   }
-}
 
-@keyframes down-slide {
-  from {
+  40% {
     opacity: 0;
-    transform: translateY(-10rem);
+    filter: blur(1rem);
+    transform: translateY(0);
   }
 
-  to {
-    transform: translateY(0rem);
+  60% {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -195,7 +195,7 @@ a {
   margin-top: 2.5rem;
   margin-left: 1rem;
   height: 13.875rem;
-  animation: img-slide-mobile 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: img-slide-mobile 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info-container::after {
