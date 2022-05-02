@@ -31,19 +31,18 @@ a {
     opacity: 1;
   }
 
-  50% {
-    opacity: 0;
-    transform: translateX(0rem) scale(0);
+  40% {
+    opacity: 0.6;
+    filter: blur(6px);
   }
 
   60% {
-    opacity: 0;
-    transform: translateX(-15rem);
+    opacity: 0.6;
+    filter: blur(6px);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0rem);
   }
 }
 
