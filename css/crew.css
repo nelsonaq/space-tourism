@@ -15,13 +15,17 @@ a {
 }
 
 @keyframes right-slide {
-  from {
+  0% {
     opacity: 0;
-    transform: translateX(-15rem);
+  }
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateX(-10%);
   }
 
-  to {
-    transform: translateX(0rem);
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -36,47 +40,27 @@ a {
   }
 }
 
-@keyframes img-slide-mobile {
-  from {
+@keyframes up-slide {
+  0% {
     opacity: 0;
-    transform: translateX(8rem);
+  }
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateY(20%);
   }
 
-  to {
-    opacity: 1;
+  100% {
     transform: translateX(0);
   }
 }
 
-/* @keyframes img-slide-tablet-desktop {
+@keyframes img-slide {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
 
   40% {
-    opacity: 0;
-    filter: blur(1rem);
-    transform: translateY(0);
-  }
-
-  60% {
-    opacity: 0;
-    filter: blur(1rem);
-    transform: translateY(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
-
-@keyframes img-slide-tablet-desktop {
-  0% {
-    opacity: 0;
-  }
-
-  60% {
     opacity: 0;
     filter: blur(0.25rem);
     transform: translateY(10%);
@@ -190,7 +174,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -211,7 +195,7 @@ a {
   margin-top: 2.5rem;
   margin-left: 1rem;
   height: 13.875rem;
-  animation: img-slide-mobile 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: img-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info-container::after {
@@ -254,15 +238,15 @@ a {
 }
 
 .dot:nth-child(2) {
-  animation: left-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: left-slide 0.6s cubic-bezier(0.98, 0.04, 0.51, 0.95);
 }
 
 .dot:nth-child(3) {
-  animation: left-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: left-slide 1s cubic-bezier(0.98, 0.04, 0.51, 0.95);
 }
 
 .dot:nth-child(4) {
-  animation: left-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: left-slide 1.4s cubic-bezier(0.98, 0.04, 0.51, 0.95);
 }
 
 .selected-dot {
@@ -283,7 +267,7 @@ a {
   opacity: 0.5;
   font-family: "Bellefair", sans-serif;
   font-weight: 300;
-  animation: right-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info h3 {
@@ -293,7 +277,7 @@ a {
   font-family: "Bellefair", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
-  animation: right-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1.3s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .crew-info p {
@@ -303,7 +287,7 @@ a {
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   font-weight: 300;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 @media (min-width: 47.9375rem) {
@@ -390,8 +374,7 @@ a {
 
   .crew-img {
     height: 35.75rem;
-    /* animation: img-slide-tablet-desktop 1s cubic-bezier(0.3, 0.96, 0.57, 0.97); */
-    animation: img-slide-tablet-desktop 1s ease-in-out;
+    animation: img-slide 1s ease-in-out;
   }
 
   .crew-info-container::after {
@@ -511,12 +494,14 @@ a {
   .crew-info h2 {
     font-size: 2rem;
     padding-bottom: 1rem;
+    animation: right-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .crew-info h3 {
     width: 38.375rem;
     font-size: 3.5rem;
     padding-bottom: 1.75rem;
+    animation: right-slide 1.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .crew-info p {
@@ -524,6 +509,7 @@ a {
     line-height: 2rem;
     font-size: 1.125rem;
     padding-bottom: 7.5rem;
+    animation: right-slide 1.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .dots-container {
