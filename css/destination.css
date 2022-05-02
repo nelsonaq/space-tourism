@@ -15,60 +15,34 @@ a {
 }
 
 @keyframes right-slide {
-  from {
-    opacity: 0;
-    transform: translateX(-30rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
-}
-
-@keyframes destination-right-slide {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
 
-  40% {
+  30% {
     opacity: 0;
-    filter: blur(0.5rem);
-    transform: translateX(0rem) scale(0.5);
-  }
-
-  60% {
-    opacity: 0;
-    filter: blur(0.5rem);
-    transform: translateX(-15rem) scale(1);
+    filter: blur(0.25rem);
+    transform: translateX(-10%);
   }
 
   100% {
-    opacity: 1;
-  }
-}
-
-@keyframes left-slide {
-  from {
-    opacity: 0;
-    transform: translateX(12rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0rem);
+    transform: translateX(0);
   }
 }
 
 @keyframes up-slide {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(10rem);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0rem);
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateY(25%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -185,7 +159,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
-  animation: right-slide 1s cubic-bezier(0.97, 0.02, 0.11, 0.96);
+  animation: right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -215,7 +189,7 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-  animation: destination-right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-names {
@@ -232,7 +206,7 @@ a {
   font-size: 0.875rem;
   font-weight: 300;
   border-bottom: 3px solid transparent;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .destination-names li:nth-child(2) {
@@ -265,7 +239,7 @@ a {
   font-size: 3.5rem;
   font-weight: 400;
   padding-top: 1.25rem;
-  animation: left-slide 0.6s cubic-bezier(0.97, 0.02, 0.11, 0.96);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-info p {
@@ -278,7 +252,7 @@ a {
   font-size: 0.9375rem;
   font-weight: 300;
   position: relative;
-  animation: up-slide 1s cubic-bezier(0.97, 0.02, 0.11, 0.96);
+  animation: up-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-info p::after {
@@ -300,11 +274,11 @@ a {
 }
 
 .distance {
-  animation: up-slide 1s cubic-bezier(0.97, 0.02, 0.11, 0.96);
+  animation: up-slide 1.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .travel {
-  animation: up-slide 1s cubic-bezier(0.97, 0.02, 0.11, 0.96);
+  animation: up-slide 1.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-details h3 {
@@ -313,6 +287,7 @@ a {
   font-size: 0.875rem;
   font-weight: 300;
   padding-top: 2rem;
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-details h4 {
@@ -322,6 +297,7 @@ a {
   font-size: 1.75rem;
   font-weight: 300;
   padding-top: 0.75rem;
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 @media (min-width: 47.9375rem) {
@@ -437,6 +413,14 @@ a {
     justify-content: space-evenly;
     width: 35.75rem;
   }
+
+  .destination-details div:nth-child(1) {
+    width: 9.75rem;
+  }
+
+  .destination-details div:nth-child(2) {
+    width: 9.75rem;
+  }
 }
 
 @media (min-width: 89.9375rem) {
@@ -518,6 +502,10 @@ a {
   .destination-info {
     align-items: flex-start;
     width: 27.75rem;
+  }
+
+  .destination-details div:nth-child(2) {
+    width: 9rem;
   }
 
   .destination-info h2 {
