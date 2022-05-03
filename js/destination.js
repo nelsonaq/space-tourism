@@ -53,7 +53,7 @@ const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
   setTimeout(() => {
     destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
-  }, 700);
+  }, 500);
 
   destinationName.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;

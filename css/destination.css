@@ -67,14 +67,12 @@ a {
     opacity: 0;
     filter: blur(0.5rem);
     filter: grayscale(100%);
-    transform: translateY(10rem);
   }
 
   60% {
     opacity: 0;
     filter: blur(0.5rem);
     filter: grayscale(100%);
-    transform: translateY(-10rem);
   }
 
   100% {
