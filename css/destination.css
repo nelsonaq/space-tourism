@@ -58,6 +58,30 @@ a {
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+    filter: blur(0.5rem);
+    filter: grayscale(100%);
+    transform: translateY(10rem);
+  }
+
+  60% {
+    opacity: 0;
+    filter: blur(0.5rem);
+    filter: grayscale(100%);
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-container {
   background-image: url(/assets/destination/background-destination-mobile.jpg);
   background-size: cover;
@@ -189,7 +213,8 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  /* animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97); */
+  animation: fade-in 1.4s ease-in-out;
 }
 
 .destination-names {
