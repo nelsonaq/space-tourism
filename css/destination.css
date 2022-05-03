@@ -58,26 +58,6 @@ a {
   }
 }
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .main-container {
   background-image: url(/assets/destination/background-destination-mobile.jpg);
   background-size: cover;
@@ -209,6 +189,7 @@ a {
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .destination-names {
