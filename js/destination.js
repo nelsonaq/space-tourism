@@ -51,10 +51,7 @@ const getJSON = async function () {
  */
 const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
-  setTimeout(() => {
-    destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
-  }, 500);
-
+  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
   destinationName.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;
   destinationDistance.textContent = destinationData.distance;
