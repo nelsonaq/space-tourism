@@ -27,6 +27,10 @@ hamburger.addEventListener("click", showLinks);
 close.addEventListener("click", showLinks);
 overlay.addEventListener("click", showLinks);
 
+/**
+ * Handles fetching the local data json file.
+ * @returns {Promise/Object} - Promise that contains the data object of the json file.
+ */
 const getJSON = async function () {
   try {
     const response = await fetch("data.json");
@@ -37,6 +41,11 @@ const getJSON = async function () {
   }
 };
 
+/**
+ * Updates the UI based on the given arguments.
+ * @param {Object} data - Object from the local json file.
+ * @param {Number} techNum - Data id of selected technology.
+ */
 const updateUI = function (data, techNum) {
   const techData = data.technology[techNum];
   techImgLandscape.style.background = `url(${techData.images.landscape})bottom / cover`;
@@ -45,6 +54,9 @@ const updateUI = function (data, techNum) {
   techDescription.textContent = techData.description;
 };
 
+/**
+ * Retriggers the animation when switching technology.
+ */
 const resetDestinationAnimation = function () {
   techImgLandscape.style.animation = "none";
   techImgLandscape.offsetWidth;
@@ -63,19 +75,26 @@ const resetDestinationAnimation = function () {
   techDescription.style.animation = null;
 };
 
-const displaySelectedNum = function (selected) {
+/**
+ * Displays UI for selected crew.
+ * @param {Element} selectedDot - Selected technology's element.
+ */
+const displaySelectedTech = function (selectedTech) {
   btnNumAll.forEach((btnNum) => btnNum.classList.remove("selected-num"));
-  selected.classList.add("selected-num");
+  selectedTech.classList.add("selected-num");
 };
 
+/**
+ * Handles all the changes that occurs when switching technologies.
+ */
 btnNums.addEventListener("click", function (e) {
   e.preventDefault();
-  const selected = e.target.closest(".num-btn");
+  const selectedTech = e.target.closest(".num-btn");
   //* Guard Clause
-  if (!selected) return;
-  const selectedNum = selected.dataset.num;
-  if (selected.classList.contains("selected-num")) return;
-  getJSON().then((data) => updateUI(data, selectedNum));
+  if (!selectedTech) return;
+  const selectedTechID = selectedTech.dataset.id;
+  if (selectedTech.classList.contains("selected-num")) return;
+  getJSON().then((data) => updateUI(data, selectedTechID));
   resetDestinationAnimation();
-  displaySelectedNum(selected);
+  displaySelectedTech(selectedTech);
 });

@@ -27,6 +27,10 @@ hamburger.addEventListener("click", showLinks);
 close.addEventListener("click", showLinks);
 overlay.addEventListener("click", showLinks);
 
+/**
+ * Handles fetching the local data json file.
+ * @returns {Promise/Object} - Promise that contains the data object of the json file.
+ */
 const getJSON = async function () {
   try {
     const response = await fetch("data.json");
@@ -37,6 +41,11 @@ const getJSON = async function () {
   }
 };
 
+/**
+ * Updates the UI based on the given arguments.
+ * @param {Object} data - Object from the local json file.
+ * @param {Number} crewNum - Data id of selected crew.
+ */
 const updateUI = function (data, crewNum) {
   const crewData = data.crew[crewNum];
   crewImg.src = crewData.images.png;
@@ -66,11 +75,18 @@ const resetDestinationAnimation = function () {
   crewBio.style.animation = null;
 };
 
+/**
+ * Displays UI for selected crew.
+ * @param {Element} selectedDot - Selected crew's element.
+ */
 const displaySelectedDot = function (selectedDot) {
   dots.forEach((dot) => dot.classList.remove("selected-dot"));
   selectedDot.classList.add("selected-dot");
 };
 
+/**
+ * Handles all the changes that occurs when switching crews.
+ */
 dotsContainer.addEventListener("click", function (e) {
   e.preventDefault();
   const selectedDot = e.target.closest(".dot");
