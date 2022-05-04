@@ -15,13 +15,34 @@ a {
 }
 
 @keyframes right-slide {
-  from {
+  0% {
     opacity: 0;
-    transform: translateX(-15rem);
+  }
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateX(-10%);
   }
 
-  to {
-    transform: translateX(0rem);
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes image-slide {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateX(10%) scaleX(0);
+    transform-origin: 100%;
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 100%;
   }
 }
 
@@ -36,50 +57,33 @@ a {
   }
 }
 
-@keyframes image-slide-mobile {
-  from {
+@keyframes num-up-slide {
+  0% {
     opacity: 0;
-    width: 0%;
-    transform: translateX(30rem);
   }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes image-slide-tablet {
-  from {
+  30% {
     opacity: 0;
-    width: 0%;
-    transform: translateX(50rem);
+    filter: blur(0.25rem);
+    transform: translateY(100%);
   }
 
   100% {
-    width: 100%;
-  }
-}
-
-@keyframes image-slide-desktop {
-  from {
-    opacity: 0;
-    height: 0%;
-    transform: translateY(40rem);
-  }
-
-  to {
-    height: 100%;
+    transform: translateX(0);
   }
 }
 
 @keyframes up-slide {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(20rem);
+  }
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateY(20%);
   }
 
-  to {
-    transform: translateY(0rem);
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -185,7 +189,7 @@ a {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 1rem;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .intro span {
@@ -204,7 +208,7 @@ a {
     bottom / cover;
   height: 10.625rem;
   margin-bottom: 2.125rem;
-  animation: image-slide-mobile 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-img-portrait {
@@ -237,11 +241,11 @@ a {
 }
 
 .num-btn:nth-child(2) {
-  animation: num-left-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+  animation: num-left-slide 1s cubic-bezier(0.96, 0.4, 0.87, 0.47);
 }
 
 .num-btn:nth-child(3) {
-  animation: num-left-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+  animation: num-left-slide 1.2s cubic-bezier(0.96, 0.4, 0.87, 0.47);
 }
 
 .selected-num {
@@ -261,7 +265,7 @@ a {
   font-weight: 300;
   letter-spacing: 2.3625px;
   padding-bottom: 0.5625rem;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-info h3 {
@@ -271,7 +275,7 @@ a {
   font-family: "Bellefair", sans-serif;
   font-weight: 300;
   padding-bottom: 1rem;
-  animation: right-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .tech-info p {
@@ -279,7 +283,7 @@ a {
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   line-height: 1.5625rem;
-  animation: right-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: up-slide 1.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 @media (min-width: 47.9375rem) {
@@ -366,7 +370,7 @@ a {
   .tech-img-landscape {
     height: 19.375rem;
     margin-bottom: 3.5rem;
-    animation: image-slide-tablet 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .num-btns {
@@ -381,11 +385,11 @@ a {
   }
 
   .num-btn:nth-child(2) {
-    animation: num-left-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+    animation: num-left-slide 1s cubic-bezier(0.96, 0.4, 0.87, 0.47);
   }
 
   .num-btn:nth-child(3) {
-    animation: num-left-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+    animation: num-left-slide 1.2s cubic-bezier(0.96, 0.4, 0.87, 0.47);
   }
 
   .tech-info {
@@ -481,7 +485,7 @@ a {
     right: 0;
     width: 32.1875rem;
     height: 32.9375rem;
-    animation: image-slide-desktop 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .tech-container {
@@ -504,11 +508,11 @@ a {
   }
 
   .num-btn:nth-child(2) {
-    animation: up-slide 0.6s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+    animation: num-up-slide 1s cubic-bezier(0.96, 0.4, 0.87, 0.47);
   }
 
   .num-btn:nth-child(3) {
-    animation: up-slide 0.8s cubic-bezier(0.96, 0.4, 0.87, 0.47);
+    animation: num-up-slide 1.2s cubic-bezier(0.96, 0.4, 0.87, 0.47);
   }
 
   .tech-info {
@@ -524,14 +528,14 @@ a {
 
   .tech-info h3 {
     font-size: 3.5rem;
-    animation: up-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 
   .tech-info p {
     font-size: 1.125rem;
     line-height: 2rem;
     width: 27.75rem;
-    animation: up-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    animation: up-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
   }
 }
 

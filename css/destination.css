@@ -35,7 +35,7 @@ a {
     opacity: 0;
   }
 
-  30% {
+  40% {
     opacity: 0;
     filter: blur(0.25rem);
     transform: translateY(25%);
