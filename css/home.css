@@ -16,7 +16,7 @@ a {
 
 @keyframes down-slide {
   from {
-    transform: translateY(-20rem);
+    transform: translateY(-100%);
     opacity: 0;
   }
 
@@ -27,12 +27,28 @@ a {
 
 @keyframes up-slide {
   from {
-    transform: translateY(20rem);
+    transform: translateY(100%);
     opacity: 0;
   }
 
   to {
     transform: translateY(0rem);
+  }
+}
+
+@keyframes right-slide {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+    filter: blur(0.25rem);
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -151,7 +167,7 @@ a {
   letter-spacing: 3px;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 300;
-  animation: down-slide 0.8s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: right-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .introduction h2 {
@@ -160,7 +176,7 @@ a {
   font-size: 5rem;
   font-family: "Bellefair", serif;
   font-weight: 400;
-  animation: down-slide 0.6s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: down-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .introduction p {
@@ -168,7 +184,7 @@ a {
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   font-weight: 300;
-  animation: down-slide 0.4s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: down-slide 1.2s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
 .circle {
@@ -185,7 +201,7 @@ a {
   width: 9.375rem;
   height: 9.375rem;
   border-radius: 50%;
-  animation: up-slide 0.8s cubic-bezier(0.02, 0.35, 0.42, 0.94);
+  animation: up-slide 1s cubic-bezier(0.02, 0.35, 0.42, 0.94);
 }
 
 @media (min-width: 47.9375rem) {
