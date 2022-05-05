@@ -150,12 +150,28 @@ a {
 
 .nav-drawer-links {
   position: absolute;
-  top: 6.375rem;
+  top: 7rem;
   left: 2rem;
+  width: 87.5%;
+  height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .nav-drawer-links li {
-  padding: 1rem 0;
+  height: 2rem;
+}
+
+.nav-drawer-links a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-drawer-links li:nth-child(2) {
+  border-right: 0.25rem solid #ffffff;
 }
 
 .nav-drawer-links span {
