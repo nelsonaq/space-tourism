@@ -330,16 +330,7 @@ a {
     justify-content: space-evenly;
   }
 
-  .nav-links a {
-    font-size: 0.875rem;
-  }
-
-  .nav-links span {
-    display: none;
-  }
-
   .nav-links li {
-    padding: 2.4375rem 0;
     transition: all 0.4s ease-in-out;
     position: relative;
   }
@@ -364,6 +355,17 @@ a {
   .nav-links li:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+  }
+
+  .nav-links a {
+    font-size: 0.875rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links span {
+    display: none;
   }
 
   .intro {
