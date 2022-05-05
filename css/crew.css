@@ -71,6 +71,16 @@ a {
   }
 }
 
+@keyframes infinite-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
 .main-container {
   background-image: url(/assets/crew/background-crew-mobile.jpg);
   background-size: cover;
@@ -95,6 +105,7 @@ a {
   height: 2.5rem;
   margin: 1.5rem;
   transition: transform 0.6s ease-in-out;
+  animation: infinite-rotation 1s linear infinite;
 }
 
 .logo:hover {
