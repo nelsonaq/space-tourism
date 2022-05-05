@@ -39,6 +39,7 @@ Users should be able to:
 
 **_Mobile Layout_** (375 x 667) \
 ![](./screenshots/mobile/mobile-home.PNG)
+![](./screenshots/mobile/mobile-home-nav-drawer.PNG)
 ![](./screenshots/mobile/mobile-destination.PNG)
 ![](./screenshots/mobile/mobile-crew.PNG)
 ![](./screenshots/mobile/mobile-technology.PNG)
