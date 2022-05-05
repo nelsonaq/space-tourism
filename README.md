@@ -37,7 +37,7 @@ Users should be able to:
 ![](./screenshots/tablet/tablet-crew.PNG)
 ![](./screenshots/tablet/tablet-technology.PNG)
 
-**_Mobile Layout_** (375 x 667) \
+**_Mobile Layout_** (375 x 667 ~ 850) \
 ![](./screenshots/mobile/mobile-home.PNG)
 ![](./screenshots/mobile/mobile-home-nav-drawer.PNG)
 ![](./screenshots/mobile/mobile-destination.PNG)
