@@ -12,7 +12,7 @@ const overlay = document.querySelector(".overlay");
  * Elements in the container
  */
 const destinationNames = document.querySelector(".destination-names");
-const destinationImg = document.querySelector(".container img");
+const destinationImg = document.querySelector(".destination-img");
 const destinationName = document.querySelector(".destination-info h2");
 const destinationDescription = document.querySelector(".destination-info p");
 const destinationDistance = document.querySelector(".distance");
@@ -51,7 +51,7 @@ const getJSON = async function () {
  */
 const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
-  destinationImg.src = `/assets/destination/image-${destinationData.name}.png`;
+  destinationImg.style.backgroundImage = `url(${destinationData.images.png})`;
   destinationName.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;
   destinationDistance.textContent = destinationData.distance;
