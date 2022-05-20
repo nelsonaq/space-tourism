@@ -212,11 +212,14 @@ a {
 }
 
 .destination-img {
+  background-image: url("../assets/destination/image-moon.png");
   height: 10.625rem;
   width: 10.625rem;
   margin-top: 2rem;
   margin-bottom: 1.625rem;
-  animation: up-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  background-position: center center;
+  background-size: contain;
+  transition: background 1s ease-in-out;
 }
 
 .destination-names {
@@ -406,7 +409,7 @@ a {
     padding-top: 2.5rem;
   }
 
-  .container img {
+  .destination-img {
     margin-top: 3.75rem;
     margin-bottom: 3.25rem;
     width: 18.75rem;
@@ -521,7 +524,7 @@ a {
     justify-content: center;
   }
 
-  .container img {
+  .destination-img {
     align-self: flex-end;
     width: 27.875rem;
     height: 27.875rem;
@@ -574,7 +577,7 @@ a {
     gap: 20rem;
   }
 
-  .container img {
+  .destination-img {
     width: 30rem;
     height: 30rem;
   }
