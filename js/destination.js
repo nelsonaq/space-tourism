@@ -62,10 +62,6 @@ const updateUI = function (data, destinationNum) {
  * Retriggers the animation when switching destination.
  */
 const resetDestinationAnimation = function () {
-  destinationImg.style.animation = "none";
-  destinationImg.offsetWidth;
-  destinationImg.style.animation = null;
-
   destinationName.style.animation = "none";
   destinationName.offsetWidth;
   destinationName.style.animation = null;
