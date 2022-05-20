@@ -218,7 +218,8 @@ a {
   margin-top: 2rem;
   margin-bottom: 1.625rem;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: background 1s ease-in-out;
 }
 
@@ -573,7 +574,7 @@ a {
 
   .container {
     height: 33.875rem;
-    width: 65.5rem;
+    width: 85rem;
     gap: 20rem;
   }
 
