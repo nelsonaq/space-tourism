@@ -106,7 +106,7 @@ destinationNames.addEventListener("click", function (e) {
   const selectedDestinationID = selectedDestination.dataset.id;
   if (selectedDestination.classList.contains("selected-destination")) return;
 
-  //* Prevents selecting another destination for 1s (to wait for the animation's full duration)
+  //* Disabled selecting another destination for 1s (to wait for the animation's full duration)
   destinationNames.style.pointerEvents = "none";
   setTimeout(() => (destinationNames.style.pointerEvents = "auto"), 1000);
 
