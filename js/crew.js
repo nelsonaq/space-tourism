@@ -48,7 +48,16 @@ const getJSON = async function () {
  */
 const updateUI = function (data, crewNum) {
   const crewData = data.crew[crewNum];
-  crewImg.src = crewData.images.png;
+  const container = document.querySelector(".container");
+  container.firstElementChild.remove();
+  const markup = `<img
+  class="crew-img"
+  src="${crewData.images.png}"
+  alt="Image of a crwe member"
+  srcset=""
+/>`;
+
+  container.insertAdjacentHTML("afterbegin", markup);
   crewRole.textContent = crewData.role;
   crewName.textContent = crewData.name;
   crewBio.textContent = crewData.bio;
