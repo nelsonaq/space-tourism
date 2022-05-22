@@ -58,10 +58,6 @@ a {
 @keyframes img-slide {
   0% {
     opacity: 0;
-  }
-
-  40% {
-    opacity: 0;
     filter: blur(0.25rem);
     transform: translateY(10%);
   }
@@ -222,7 +218,7 @@ a {
   margin-top: 2.5rem;
   margin-left: 1rem;
   height: 13.875rem;
-  animation: img-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  animation: img-slide 1s ease-in-out;
 }
 
 .crew-info-container::after {
