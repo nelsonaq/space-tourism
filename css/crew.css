@@ -219,14 +219,9 @@ a {
 }
 
 .crew-img {
-  background-image: url("../assets/crew/image-douglas-hurley.png");
   margin-top: 2.5rem;
   margin-left: 1rem;
-  width: 100%;
   height: 13.875rem;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
   animation: img-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
 }
 
