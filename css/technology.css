@@ -29,23 +29,6 @@ a {
   }
 }
 
-@keyframes image-slide {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 0;
-    transform: translateX(10%) scaleX(0);
-    transform-origin: 100%;
-  }
-
-  100% {
-    opacity: 1;
-    transform-origin: 100%;
-  }
-}
-
 @keyframes num-left-slide {
   from {
     opacity: 0;
@@ -235,7 +218,7 @@ a {
     bottom / cover;
   height: 10.625rem;
   margin-bottom: 2.125rem;
-  animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+  transition: background 1s ease-in-out;
 }
 
 .tech-img-portrait {
@@ -399,7 +382,7 @@ a {
   .tech-img-landscape {
     height: 19.375rem;
     margin-bottom: 3.5rem;
-    animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    transition: background 1s ease-in-out;
   }
 
   .num-btns {
@@ -514,7 +497,7 @@ a {
     right: 0;
     width: 32.1875rem;
     height: 32.9375rem;
-    animation: image-slide 1s cubic-bezier(0.3, 0.96, 0.57, 0.97);
+    transition: background 1s ease-in-out;
   }
 
   .tech-container {

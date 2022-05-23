@@ -58,10 +58,6 @@ const updateUI = function (data, techNum) {
  * Retriggers the animation when switching technology.
  */
 const resetDestinationAnimation = function () {
-  techImgLandscape.style.animation = "none";
-  techImgLandscape.offsetWidth;
-  techImgLandscape.style.animation = null;
-
   techImgPortrait.style.animation = "none";
   techImgPortrait.offsetWidth;
   techImgPortrait.style.animation = null;
