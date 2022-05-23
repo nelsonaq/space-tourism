@@ -51,10 +51,13 @@ const getJSON = async function () {
  */
 const updateUI = function (data, destinationNum) {
   const destinationData = data.destinations[destinationNum];
+
+  //* Ensures the images has been fully loaded before being displayed in UI
   const img = new Image();
   img.src = destinationData.images.png;
   img.onload = () =>
     (destinationImg.style.backgroundImage = `url(${destinationData.images.png})`);
+
   destinationName.textContent = destinationData.name;
   destinationDescription.textContent = destinationData.description;
   destinationDistance.textContent = destinationData.distance;
