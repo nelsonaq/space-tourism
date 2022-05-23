@@ -48,8 +48,16 @@ const getJSON = async function () {
  */
 const updateUI = function (data, techNum) {
   const techData = data.technology[techNum];
-  techImgLandscape.style.background = `url(${techData.images.landscape})bottom / cover`;
-  techImgPortrait.style.background = `url(${techData.images.portrait})`;
+
+  //* Ensures the images has been fully loaded before being displayed in UI
+  const img = new Image();
+  img.src = techData.images.landscape;
+  img.src = techData.images.portrait;
+  img.onload = () => {
+    techImgLandscape.style.background = `url(${techData.images.landscape})bottom / cover`;
+    techImgPortrait.style.background = `url(${techData.images.portrait})`;
+  };
+
   techName.textContent = techData.name;
   techDescription.textContent = techData.description;
 };
