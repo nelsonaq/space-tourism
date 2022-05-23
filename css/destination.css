@@ -93,10 +93,6 @@ a {
   animation: infinite-rotation 1s linear infinite;
 }
 
-.logo:hover {
-  transform: rotate(720deg);
-}
-
 .hamburger {
   margin: 1.5rem;
   cursor: pointer;
